@@ -1,0 +1,6 @@
+{
+  "name": "mackerel-agent-active",
+  "run_list": [
+    "recipe[mackerel_setting_sample::default]"
+  ]
+}
