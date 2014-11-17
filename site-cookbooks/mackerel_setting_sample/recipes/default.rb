@@ -6,6 +6,6 @@
 #
 
 node.set_unless['mackerel-agent']['conf']['apikey'] = ::APIHelper.collect_api_key
-node.set_unless['mackerel-agent']['conf']['roles'] = [node.chef_environment, node.roles].flatten
+node.set_unless['mackerel-agent']['conf']['roles'] = [node.chef_environment, node.roles].flatten.map {|r| ["My-Service", r].join(":")}
 
 include_recipe 'mackerel-agent::default'
