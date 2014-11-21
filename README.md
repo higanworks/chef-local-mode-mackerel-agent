@@ -34,6 +34,19 @@ Compiling Cookbooks...
 Please input Mackrel API_KEY ? << Please input apikey here.
 ```
 
+set API_KEY from attribute by node, role or environment.
+
+```
+{
+  "mackerel-agent": {
+    "conf": {
+      "apikey": "your api key"
+    }
+  }
+}
+```
+
+
 ## run chef via knife-zero(optional)
 
 1. bootstrap `knife zerobootstrap {ip address} -r 'role[mackerel-agent-active]' `
